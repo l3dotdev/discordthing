@@ -1,0 +1,63 @@
+{
+	"name": "discordthing",
+	"version": "0.2.1",
+	"description": "A lightweight framework for building discord bots built on-top of discord.js",
+	"type": "module",
+	"main": "./build/index.js",
+	"types": "./build/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./build/index.d.ts",
+			"import": "./build/index.js"
+		},
+		"./options": {
+			"types": "./build/options/index.d.ts",
+			"import": "./build/options/index.js"
+		},
+		"./commands": {
+			"types": "./build/commands/index.d.ts",
+			"import": "./build/commands/index.js"
+		},
+		"./events": {
+			"types": "./build/events/index.d.ts",
+			"import": "./build/events/index.js"
+		},
+		"./utils": {
+			"types": "./build/utils.d.ts",
+			"import": "./build/utils.js"
+		}
+	},
+	"files": [
+		"build",
+		"!build/**/*.test.*"
+	],
+	"scripts": {
+		"build": "rm -rf build && tsc",
+		"package": "pnpm build",
+		"prepublishOnly": "pnpm package",
+		"eslint": "eslint .",
+		"lint": "eslint . && prettier --check .",
+		"lint-fix": "eslint . --fix && prettier --write .",
+		"format": "prettier --write ."
+	},
+	"author": "l3dotdev",
+	"license": "MIT",
+	"homepage": "https://github.com/l3dotdev/discordthing",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/l3dotdev/discordthing.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"peerDependencies": {
+		"discord.js": "^14.25.0"
+	},
+	"dependencies": {
+		"@l3dev/result": "^0.6.2",
+		"tslog": "^4.10.2"
+	},
+	"devDependencies": {
+		"zod": "^4.0.0"
+	}
+}

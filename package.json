@@ -1,0 +1,27 @@
+{
+	"name": "discordthing-monorepo",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"lint": "pnpm -r eslint && prettier --check .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@eslint/core": "^1.1.0",
+		"@eslint/js": "^9.39.0",
+		"@types/eslint": "^9.6.1",
+		"@types/node": "^24.3.1",
+		"eslint": "^9.39.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-require-extensions": "workspace:*",
+		"eslint-import-resolver-typescript": "^4.4.4",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-zod": "^3.0.2",
+		"globals": "^16.0.0",
+		"prettier": "^3.5.3",
+		"tsx": "^4.20.4",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.54.0"
+	}
+}

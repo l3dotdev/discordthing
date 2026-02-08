@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "preserve",
+		"lib": ["esnext"],
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noImplicitReturns": false,
+		"strict": true,
+		"strictNullChecks": true,
+		"stripInternal": true,
+		"verbatimModuleSyntax": true,
+		"declaration": true
+	}
+}

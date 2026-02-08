@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "preserve",
+		"lib": ["esnext"],
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noImplicitReturns": false,
+		"skipLibCheck": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"stripInternal": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["index.ts"],
+	"exclude": ["node_modules/**"]
+}
