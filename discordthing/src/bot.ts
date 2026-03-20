@@ -14,6 +14,7 @@ export type BotOptions = {
 	commands?: Command<string, SlashCommandBuilder>[];
 	listeners?: Listener<any>[];
 	logger?: ILogger;
+	verbose?: boolean;
 };
 
 export class Bot {
@@ -55,9 +56,15 @@ export class Bot {
 			]
 		});
 
-		this.client.on(Events.Debug, (message) => {
-			this.logger.debug(message);
-		});
+		if (options.verbose) {
+			const clientLogger =
+				"getSubLogger" in this.logger && this.logger.getSubLogger
+					? this.logger.getSubLogger({ name: "client" })
+					: this.logger;
+			this.client.on(Events.Debug, (message) => {
+				clientLogger.debug(message);
+			});
+		}
 		this.client.on(Events.ClientReady, this.onReady.bind(this));
 	}
 

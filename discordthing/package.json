@@ -1,6 +1,6 @@
 {
 	"name": "discordthing",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "A lightweight framework for building discord bots built on-top of discord.js",
 	"type": "module",
 	"main": "./build/index.js",

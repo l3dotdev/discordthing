@@ -5,4 +5,5 @@ export interface ILogger {
 	warn(...args: unknown[]): any;
 	error(...args: unknown[]): any;
 	fatal(...args: unknown[]): any;
+	getSubLogger?: (settings: { name?: string }) => ILogger;
 }
