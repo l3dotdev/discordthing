@@ -68,10 +68,12 @@ export class EventsManager {
 			return NONE;
 		}
 
-		(listener.once ? this.bot.client.once : this.bot.client.on)(
-			listener.event,
-			this.createListenerFn(listener)
-		);
+		const fn = this.createListenerFn(listener);
+		if (listener.once) {
+			this.bot.client.once(listener.event, fn);
+		} else {
+			this.bot.client.on(listener.event, fn);
+		}
 
 		return NONE;
 	}
